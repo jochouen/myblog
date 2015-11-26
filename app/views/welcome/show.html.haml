@@ -1,0 +1,19 @@
+%h3 投稿エリア
+%p= Time.now
+%p= @username
+%p= @message
+
+<hr />
+
+= form_tag '/welcome/show' do
+  = label_tag :username, '名前:'
+  = text_field_tag :username
+  <br />
+  <br />
+  = label_tag :message, '本文:'
+  = text_area_tag :message
+  <br />
+  <br />
+  = submit_tag '投稿'
+
+

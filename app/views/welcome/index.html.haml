@@ -1,0 +1,11 @@
+%h1 白猫プロジェクト掲示板ようこそ
+%h2 ログイン
+= form_tag '/welcome/index' do
+    = label_tag :name, 'name:'
+    = text_field_tag :name
+    = label_tag :password, 'password:'
+    = text_field_tag :password
+    = submit_tag 'send'
+
+
+%p= @errorMsg
