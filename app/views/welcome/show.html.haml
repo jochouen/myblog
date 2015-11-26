@@ -1,19 +1,21 @@
 %h3 投稿エリア
-%p= Time.now
-%p= @username
-%p= @message
+- @messages.each do |message|
+  %p= message.username
+  %p= message.message
 
-<hr />
+%hr
 
-= form_tag '/welcome/show' do
+= form_tag '/welcome/create' do
   = label_tag :username, '名前:'
   = text_field_tag :username
-  <br />
-  <br />
+  %br
+  %br
   = label_tag :message, '本文:'
   = text_area_tag :message
-  <br />
-  <br />
+  %br
+  %br
   = submit_tag '投稿'
+
+  %p#error= flash[:error]
 
 

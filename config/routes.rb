@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   get 'welcome/index'
-  post 'welcome/index' => 'welcome#index'
+  post 'welcome/login' => 'welcome#login'
   get 'welcome/show' => 'welcome#show'
-  post 'welcome/show' => 'welcome#show'
+  post 'welcome/create' => 'welcome#create'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
